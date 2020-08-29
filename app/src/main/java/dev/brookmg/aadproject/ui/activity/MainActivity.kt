@@ -1,7 +1,8 @@
-package dev.brookmg.aadproject
+package dev.brookmg.aadproject.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import dev.brookmg.aadproject.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
