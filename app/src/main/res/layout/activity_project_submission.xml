@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.ProjectSubmissionActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:background="@color/black"
+        app:liftOnScroll="true"
+        app:elevation="5dp"
+        app:expanded="true"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/main_tool_bar"
+            app:contentInsetStart="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/gad_banner_image"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/gads"
+                    android:padding="16dp"
+                    android:contentDescription="@string/gad_banner"
+                    android:layout_width="match_parent"
+                    app:layout_constraintHeight_max="150dp"
+                    android:layout_height="wrap_content" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <TextView
+            android:id="@+id/project_submission_text"
+            android:text="@string/project_submission"
+            android:padding="16dp"
+            android:textSize="18sp"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/project_submission_text_bottom_gradient"
+                android:layout_height="2dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:rotation="180"
+                android:background="@drawable/project_submission_text_bottom_gradient"
+                android:layout_height="2dp" />
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/first_name"
+        app:layout_constraintTop_toBottomOf="@+id/appbar_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/last_name"
+        app:hintEnabled="true"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:hint="@string/first_name"
+        app:boxStrokeColor="@color/white"
+        app:boxCornerRadiusBottomEnd="5dp"
+        app:hintTextColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/last_name"
+        app:layout_constraintTop_toBottomOf="@+id/first_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        app:hintTextColor="@color/white"
+        android:hint="@string/last_name"
+        app:boxStrokeColor="@color/white"
+        app:boxCornerRadiusBottomEnd="5dp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/last_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/github_link"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        app:hintTextColor="@color/white"
+        android:hint="@string/email"
+        app:boxStrokeColor="@color/white"
+        app:boxCornerRadiusBottomEnd="5dp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/github_link"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/submit_button"
+        android:layout_marginHorizontal="16dp"
+        android:hint="@string/github_link"
+        app:hintTextColor="@color/white"
+        app:boxStrokeColor="@color/white"
+        app:boxCornerRadiusBottomEnd="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/submit_button"
+        android:text="@string/submit"
+        android:layout_margin="16dp"
+        app:backgroundTint="@color/orange"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/github_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

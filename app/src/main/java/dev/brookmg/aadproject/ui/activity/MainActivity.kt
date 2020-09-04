@@ -1,5 +1,6 @@
 package dev.brookmg.aadproject.ui.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.android.material.tabs.TabLayoutMediator
@@ -20,6 +21,10 @@ class MainActivity : AppCompatActivity() {
         tabAdapter = TabAdapter(supportFragmentManager, lifecycle)
         mainActivity.mainViewpager.adapter = tabAdapter
         mainActivity.mainViewpager.offscreenPageLimit = 3
+
+        mainActivity.submitButton.setOnClickListener {
+            startActivity(Intent(this, ProjectSubmissionActivity::class.java))
+        }
 
         TabLayoutMediator(mainActivity.tabLayout, mainActivity.mainViewpager) {
             tab, position ->
