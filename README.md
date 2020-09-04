@@ -9,6 +9,7 @@
         <td><img src="screenshots/3.jpg" width="150" /></td>
         <td><img src="screenshots/4.jpg" width="150" /></td>
         <td><img src="screenshots/5.jpg" width="150" /></td>
+        <td><img src="screenshots/6.jpg" width="150" /></td>
     </tr>
 </table>
 </p>
