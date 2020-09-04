@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:contentPadding="5dp"
+    app:cardBackgroundColor="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/main_image_view"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="@string/learning_badge_image"
+            android:layout_width="wrap_content"
+            android:maxWidth="150dp"
+            android:scaleType="fitXY"
+            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            app:layout_constraintWidth_max="150dp"
+            app:layout_constraintHeight_max="130dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/leader_name"
+            tools:text="Item One Name"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/main_image_view"
+            app:layout_constraintBottom_toTopOf="@+id/leader_detail"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/leader_detail"
+            tools:text="224 Watching hours, Ethiopia"
+            app:layout_constraintTop_toBottomOf="@+id/leader_name"
+            app:layout_constraintStart_toEndOf="@+id/main_image_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/main_image_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

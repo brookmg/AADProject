@@ -6,4 +6,5 @@
     <string name="skill_iq_leaders">Skill IQ Leaders</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="learning_badge_image">Learning Badge Image</string>
 </resources>
